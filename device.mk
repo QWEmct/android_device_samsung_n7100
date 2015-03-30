@@ -43,6 +43,15 @@ LOCAL_KERNEL := device/samsung/n7100/qkernel
 PRODUCT_COPY_FILES := \
 	$(LOCAL_KERNEL):kernel
 
+# Kernel Modules
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/modules/commkm.ko:root/system/lib/modules/commkm.ko \
+    $(LOCAL_PATH)/modules/dhd.ko:root/system/lib/modules/dhd.ko \
+    $(LOCAL_PATH)/modules/mvpkm.ko:root/system/lib/modules/mvpkm.ko \
+    $(LOCAL_PATH)/modules/oektestkm.ko:root/system/lib/modules/oektestkm.ko \
+    $(LOCAL_PATH)/modules/pvtcpkm.ko:root/system/lib/modules/pvtcpkm.ko \
+    $(LOCAL_PATH)/modules/scsi_wait_scan.ko:root/system/lib/modules/scsi_wait_scan.ko
+
 # Camera Wrapper
 PRODUCT_PACKAGES += \
     camera.smdk4x12
