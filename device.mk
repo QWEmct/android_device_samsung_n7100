@@ -36,7 +36,12 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/t03g
+    $(LOCAL_PATH)/configs/tiny_hw.xml:system/etc/sound/n7100
+
+# Use prebuilt kernel :(
+LOCAL_KERNEL := device/samsung/n7100/qkernel
+PRODUCT_COPY_FILES := \
+	$(LOCAL_KERNEL):kernel
 
 # Camera Wrapper
 PRODUCT_PACKAGES += \
